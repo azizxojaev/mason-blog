@@ -1,0 +1,21 @@
+<div class="tm-sidebar sticky">
+    <section id="welcome" class="tm-content-box tm-banner margin-b-15">
+        <div class="tm-banner-inner">
+            <i class="fa fa-film fa-4x margin-b-40"></i>
+            <h1 class="tm-banner-title">Mason</h1>
+            <p class="tm-banner-subtitle">new HTML template</p>
+        </div>
+    </section>
+    <nav class="tm-main-nav">
+        <ul class="tm-main-nav-ul">
+            <li class="tm-nav-item"><a href="{% url 'home' %}" class="tm-nav-item-link tm-button {% if url_name == 'home' %}active{% endif %}">Gallery</a>
+            </li>
+            <li class="tm-nav-item"><a href="{% url 'timeline' %}" class="tm-nav-item-link tm-button {% if url_name == 'timeline' %}active{% endif %}">Timeline</a>
+            </li>
+            <li class="tm-nav-item"><a href="{% url 'about' %}" class="tm-nav-item-link tm-button {% if url_name == 'about' %}active{% endif %}">About</a>
+            </li>
+            <li class="tm-nav-item"><a href="{% url 'contact' %}" class="tm-nav-item-link tm-button {% if url_name == 'contact' %}active{% endif %}">Contact</a>
+            </li>
+        </ul>
+    </nav>
+</div>

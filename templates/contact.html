@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}
+<title>
+    Contact page
+</title>
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<div class="tm-main-content">
+    <div class="tm-content-box tm-content-box-home">
+        <img src="{% static 'img/1080x360-01.jpg' %}" alt="Image" class="img-fluid tm-welcome-img">
+    </div>
+    <section id="contact" class="tm-content-box">
+        <div class="row margin-b-50">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <h2 class="tm-section-title tm-blue-text">Contact Us</h2>
+                <form method="post" class="contact-form">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" id="contact_name" name="name" class="form-control" placeholder="Name"
+                            required />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="contact_email" name="email" class="form-control" placeholder="Email"
+                            required />
+                    </div>
+                    <div class="form-group">
+                        <textarea id="contact_message" name="message" class="form-control" rows="9"
+                            placeholder="Message" required></textarea>
+                    </div>
+                    <button type="submit"
+                        class="btn btn-primary tm-button-rounded tm-button-orange tm-button-no-border tm-button-normal">Send</button>
+                </form>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="tm-address-box">
+                    <p>Morbi auctor euismod dictum. Morbi eu nibh in nulla interdum placerat. Donec pellentesque est at
+                        sem aliquam hendrerit.</p>
+                    <address>
+                        <span class="tm-blue-text">Mailing Address</span><br>
+                        {{ info.address }}<br><br>
+                        Email: <a class="tm-blue-text" href="mailto:{{ info.email }}">{{ info.email }}</a><br>
+                        Tel: <a class="tm-black-text" href="tel:{{ info.phone_number }}">{{ info.phone_number }}</a><br>
+                        Fax: <a class="tm-black-text" href="tel:{{ info.fax }}">{{ info.fax }}</a><br>
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div id="google-map"></div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

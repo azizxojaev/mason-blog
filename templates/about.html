@@ -1,0 +1,82 @@
+{% extends 'base.html' %} {% block title %}
+<title>About page</title>
+{% endblock %} {% block content %}
+<div class="tm-main-content">
+  <div class="row mb-5">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center mb-md-0 mb-4">
+      <img
+        src="/media/{{ about_text.section1_image }}"
+        alt="Image"
+        class="img-fluid"
+      />
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 pl-md-4 tm-flex-center">
+      <div class="tm-about-text tm-flexbox-ie-fix">
+        <h2 class="tm-orange-text mb-4">{{ about_text.section1_header }}</h2>
+        <p class="mb-4">{{ about_text.section1_text }}</p>
+      </div>
+    </div>
+  </div>
+  <!-- row -->
+  <div class="row mb-5">
+    <div
+      class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mb-md-0 mb-4 tm-flex-center"
+    >
+      <div class="tm-about-text tm-flexbox-ie-fix">
+        <h2 class="tm-orange-text mb-4">{{ about_text.section2_header }}</h2>
+        <p class="mb-4">{{ about_text.section2_text }}</p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center pl-md-4">
+      <img
+        src="/media/{{ about_text.section2_image }}"
+        alt="Image"
+        class="img-fluid"
+      />
+    </div>
+  </div>
+  <!-- row -->
+  <div class="row mb-4">
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 mb-4">
+      <div class="tm-bg-orange p-5">
+        <div class="d-flex justify-content-center mb-4">
+          <img src="/media/{{ about_text.card1_image }}" height="72px" alt="" />
+        </div>
+        <h3 class="mb-4">{{ about_text.card1_header }}</h3>
+        <p>{{ about_text.card1_text }}</p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 mb-4">
+      <div class="tm-bg-orange p-5">
+        <div class="d-flex justify-content-center mb-4">
+          <img src="/media/{{ about_text.card2_image }}" height="72px" alt="" />
+        </div>
+        <h3 class="mb-4">{{ about_text.card2_header }}</h3>
+        <p>{{ about_text.card2_text }}</p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 mb-4">
+      <div class="tm-bg-orange p-5">
+        <div class="d-flex justify-content-center mb-4">
+          <img src="/media/{{ about_text.card3_image }}" height="72px" alt="" />
+        </div>
+        <h3 class="mb-4">{{ about_text.card3_header }}</h3>
+        <p>{{ about_text.card3_text }}</p>
+      </div>
+    </div>
+  </div>
+  <!-- row -->
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="tm-box-pad tm-bordered-box">
+        <h2 class="tm-section-title tm-orange-text">
+            {{ about_text.bottom_section_header }}
+        </h2>
+        <p>
+            {{ about_text.bottom_section_text }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

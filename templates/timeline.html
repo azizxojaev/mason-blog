@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}
+<title>
+    TimeLine page
+</title>
+{% endblock %}
+
+{% block content %}
+<div class="tm-main-content">
+    {% for i in timelines %}
+    <div class="row mb-5">
+        <div class="media tm-flexbox-ie-fix tm-width-ie-fix">
+            <div class="tm-media-img-container">
+                <div class="text-center pt-31 pb-31 tm-timeline-date tm-bg-pink">{{ i.created_date | date:"d M Y" }}</div>
+                <img class="d-flex img-fluid" src="/media/{{ i.image }}" alt="Generic placeholder image">
+            </div>
+            
+            <div class="media-body tm-flexbox-ie-fix tm-width-ie-fix tm-bg-light-gray">
+            <div class="p-5">
+                <h2 class="mb-4 mt-0 tm-blue-text tm-timeline-item-title">{{ i.title }}</h2>
+                <p class="mb-4">
+                    {{ i.description }}    
+                </p>
+            </div>                            
+            </div>
+        </div>
+    </div> <!-- row -->
+    {% endfor %}
+{% endblock %}
